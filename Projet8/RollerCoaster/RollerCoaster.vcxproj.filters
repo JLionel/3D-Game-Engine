@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{de03e27c-7cfd-44df-a836-b6cdea488d0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scenes">
+      <UniqueIdentifier>{63460e92-4f1e-4751-9b8b-ce450c5f8f31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scripts">
+      <UniqueIdentifier>{2a34c824-fc6f-4dd3-a4fb-0fb4be78c117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scripts\Rail">
+      <UniqueIdentifier>{ccb7a44c-9773-4958-8357-474eec4fabee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scripts\Movement">
+      <UniqueIdentifier>{e180500a-cfc0-4f17-9e62-4673c2773114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scripts\Bullet">
+      <UniqueIdentifier>{91edca26-f7b7-46a3-89f2-f9721c0e2f24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scripts\UI">
+      <UniqueIdentifier>{fd5308fb-b86f-447f-8847-c8ad1ea8d490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scripts\Singletons">
+      <UniqueIdentifier>{28ee407d-2605-466a-abd4-c87d095042e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Game\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuScene.h">
+      <Filter>Game\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="RailMaker.h">
+      <Filter>Game\Scripts\Rail</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveAlongRails.h">
+      <Filter>Game\Scripts\Rail</Filter>
+    </ClInclude>
+    <ClInclude Include="FPCam.h">
+      <Filter>Game\Scripts\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Shoot.h">
+      <Filter>Game\Scripts\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletMove.h">
+      <Filter>Game\Scripts\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseScript.h">
+      <Filter>Game\Scripts\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuScript.h">
+      <Filter>Game\Scripts\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CrosshairScript.h">
+      <Filter>Game\Scripts\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>Game\Scripts\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Game\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneSingleton.h">
+      <Filter>Game\Scripts\Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundMusic.h">
+      <Filter>Game\Scripts\Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Target.h">
+      <Filter>Game\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="LionelScene.h">
+      <Filter>Game\Scenes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Game\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuScene.cpp">
+      <Filter>Game\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="RailMaker.cpp">
+      <Filter>Game\Scripts\Rail</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveAlongRails.cpp">
+      <Filter>Game\Scripts\Rail</Filter>
+    </ClCompile>
+    <ClCompile Include="FPCam.cpp">
+      <Filter>Game\Scripts\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="Shoot.cpp">
+      <Filter>Game\Scripts\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletMove.cpp">
+      <Filter>Game\Scripts\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseScript.cpp">
+      <Filter>Game\Scripts\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScript.cpp">
+      <Filter>Game\Scripts\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CrosshairScript.cpp">
+      <Filter>Game\Scripts\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>Game\Scripts\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Game\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneSingleton.cpp">
+      <Filter>Game\Scripts\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundMusic.cpp">
+      <Filter>Game\Scripts\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Target.cpp">
+      <Filter>Game\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="LionelScene.cpp">
+      <Filter>Game\Scenes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RollerCoaster.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RollerCoaster.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
