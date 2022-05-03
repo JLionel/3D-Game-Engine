@@ -12,10 +12,10 @@ DirectX 9
 C++
 
 #### Group
-Flavien MERITTO  
-François CALVET  
-Lionel JANIN  
-Killian PEREZ (myself)
+[Flavien MERITTO](https://github.com/Ny0n)  
+[François CALVET](https://github.com/FranYuu)  
+[Lionel JANIN](https://github.com/JLionel)  
+[Killian PEREZ](https://github.com/Meshanda)  
 
 #### Time to realize it
 1 month
