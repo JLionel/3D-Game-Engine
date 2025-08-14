@@ -1,5 +1,7 @@
 # Direct 8
 3D Rollercoaster shooter
+
+Launch the game with RollerCoaster.exe
  
 ## Context
 This game has been made for educational purpose during the first year of the Msc Video Game programming in Gaming Campus with the supervision of Sylvain Seccia.  
