@@ -16,7 +16,7 @@ void MenuScene::GenerateContent()
 	auto backgroundCanvas = CreateEmpty();
 
 	auto BackgroundImg = backgroundCanvas->AddComponent<Image>();
-	BackgroundImg->filePath = L"Image\\background.jpg";
+	BackgroundImg->filePath = L"Assets\\Image\\background.jpg";
 	BackgroundImg->width = 1920;
 	BackgroundImg->height = 1080;
 
@@ -29,7 +29,7 @@ void MenuScene::GenerateContent()
 	GameObject* menuCanvas = CreateEmpty();
 
 	auto logoImg = menuCanvas->AddComponent<Image>();
-	logoImg->filePath = L"Image\\mine.png";
+	logoImg->filePath = L"Assets\\Image\\mine.png";
 	logoImg->position = D3DXVECTOR2(500, 50);
 	logoImg->originalSize = true;
 
@@ -66,10 +66,10 @@ void MenuScene::GenerateContent()
 	int columnPadding = 190;
 
 	auto optionsPanel = optionsCanvas->AddComponent<Image>();
-	optionsPanel->filePath = L"Image\\blanc.png";
+	optionsPanel->filePath = L"Assets\\Image\\blanc.png";
 	optionsPanel->width = 1500;
 	optionsPanel->height = 850;
-	auto optionsPanelPosition = D3DXVECTOR2((SCREEN_WIDTH - optionsPanel->width) * .5f, (SCREEN_HEIGHT - optionsPanel->height) * .5f);
+	auto optionsPanelPosition = D3DXVECTOR2((SCREEN_RESOLUTION_WIDTH - optionsPanel->width) * .5f, (SCREEN_RESOLUTION_HEIGHT - optionsPanel->height) * .5f);
 	optionsPanel->position = optionsPanelPosition;
 	optionsPanel->imageColor = D3DCOLOR_ARGB(120, 153, 153, 153);
 
@@ -246,10 +246,10 @@ void MenuScene::GenerateContent()
 	auto creditsCanvas = CreateEmpty();
 
 	auto creditsPanel = creditsCanvas->AddComponent<Image>();
-	creditsPanel->filePath = L"Image\\blanc.png";
+	creditsPanel->filePath = L"Assets\\Image\\blanc.png";
 	creditsPanel->width = 1500;
 	creditsPanel->height = 850;
-	auto creditsPanelPosition = D3DXVECTOR2((SCREEN_WIDTH - creditsPanel->width) * .5f, (SCREEN_HEIGHT - creditsPanel->height) * .5f);
+	auto creditsPanelPosition = D3DXVECTOR2((SCREEN_RESOLUTION_WIDTH - creditsPanel->width) * .5f, (SCREEN_RESOLUTION_HEIGHT - creditsPanel->height) * .5f);
 	creditsPanel->position = creditsPanelPosition;
 	creditsPanel->imageColor = D3DCOLOR_ARGB(120, 153, 153, 153);
 	
@@ -265,7 +265,7 @@ void MenuScene::GenerateContent()
 	groupeText->fontHeight = 60;
 	groupeText->size.x = 350;
 	groupeText->textColor = D3DCOLOR_ARGB(255, 0, 255, 0);
-	groupeText->position.x = SCREEN_WIDTH * .5f - groupeText->size.x * .5f;
+	groupeText->position.x = SCREEN_RESOLUTION_WIDTH * .5f - groupeText->size.x * .5f;
 	groupeText->position.y = creditsPanelPosition.y + 200;
 
 	auto flavienText = creditsCanvas->AddComponent<Textbox>();
@@ -273,7 +273,7 @@ void MenuScene::GenerateContent()
 	flavienText->fontHeight = 40;
 	flavienText->size.x = 300;
 	flavienText->textColor = D3DCOLOR_ARGB(255, 10, 240, 163);
-	flavienText->position.x = SCREEN_WIDTH * .5f - flavienText->size.x *.5f;
+	flavienText->position.x = SCREEN_RESOLUTION_WIDTH * .5f - flavienText->size.x *.5f;
 	flavienText->position.y = groupeText->position.y + flavienText->size.y + 60;
 
 	auto lionelText = creditsCanvas->AddComponent<Textbox>();
@@ -281,15 +281,15 @@ void MenuScene::GenerateContent()
 	lionelText->fontHeight = 40;
 	lionelText->size.x = 300;
 	lionelText->textColor = D3DCOLOR_ARGB(255, 30, 30, 255);
-	lionelText->position.x = SCREEN_WIDTH * .5f - lionelText->size.x * .5f;
+	lionelText->position.x = SCREEN_RESOLUTION_WIDTH * .5f - lionelText->size.x * .5f;
 	lionelText->position.y = flavienText->position.y + lionelText->size.y + 30;
 
 	auto franText = creditsCanvas->AddComponent<Textbox>();
-	franText->text = L"François CALVET";
+	franText->text = L"Franï¿½ois CALVET";
 	franText->fontHeight = 40;
 	franText->size.x = 300;
 	franText->textColor = D3DCOLOR_ARGB(255, 255,0,0);
-	franText->position.x = SCREEN_WIDTH * .5f - franText->size.x * .5f;
+	franText->position.x = SCREEN_RESOLUTION_WIDTH * .5f - franText->size.x * .5f;
 	franText->position.y = lionelText->position.y + franText->size.y + 30;
 
 	auto killianText = creditsCanvas->AddComponent<Textbox>();
@@ -297,7 +297,7 @@ void MenuScene::GenerateContent()
 	killianText->fontHeight = 40;
 	killianText->size.x = 300;
 	killianText->textColor = D3DCOLOR_ARGB(255, 255, 255, 0);
-	killianText->position.x = SCREEN_WIDTH * .5f - killianText->size.x * .5f;
+	killianText->position.x = SCREEN_RESOLUTION_WIDTH * .5f - killianText->size.x * .5f;
 	killianText->position.y = franText->position.y + killianText->size.y + 30;
 
 	//easter egg hidden in credits menu
@@ -308,12 +308,12 @@ void MenuScene::GenerateContent()
 	easterEggBtn->drawBorder = false;
 	easterEggBtn->size = { 50,30 };
 	easterEggBtn->normalBoxColor = D3DCOLOR_ARGB(120, 153, 153, 153);
-	easterEggBtn->position = D3DXVECTOR2(SCREEN_WIDTH - easterEggBtn->size.x, 0);
+	easterEggBtn->position = D3DXVECTOR2(SCREEN_RESOLUTION_WIDTH - easterEggBtn->size.x, 0);
 
 	auto easterEggImg = easterEgg->AddComponent<Image>();
-	easterEggImg->filePath = L"Image\\easterEgg.png";
-	easterEggImg->width = SCREEN_WIDTH;
-	easterEggImg->height = SCREEN_HEIGHT;
+	easterEggImg->filePath = L"Assets\\Image\\easterEgg.png";
+	easterEggImg->width = SCREEN_RESOLUTION_WIDTH;
+	easterEggImg->height = SCREEN_RESOLUTION_HEIGHT;
 	easterEggImg->SetEnabled(false);
 
 	AddToScene(easterEgg);
@@ -331,7 +331,7 @@ void MenuScene::GenerateContent()
 
 	const auto script = new MainMenuScript(menuCanvas, optionsCanvas, creditsCanvas, menuBtnList, inputOptionsList, checkboxOptionsList, timerValue, scoreMinValue, easterEgg);
 	MenuManager->AddComponent(script);
-	MenuManager->AddComponent<AudioSource>(L"Audio\\music.wav", false, 0.3f);
+	MenuManager->AddComponent<AudioSource>(L"Assets\\Audio\\music.wav", false, 0.3f);
 
 	AddToScene(MenuManager);
 #pragma endregion MenuManager
@@ -340,7 +340,7 @@ void MenuScene::GenerateContent()
 	GameObject* audio = CreateEmpty();
 
 	audio->AddComponent<BackgroundMusic>();
-	audio->AddComponent<AudioSource>(L"Audio\\bgmusic.wav", true, 0.3f);
+	audio->AddComponent<AudioSource>(L"Assets\\Audio\\bgmusic.wav", true, 0.3f);
 
 	AddToScene(audio);
 #pragma endregion Audio

@@ -22,7 +22,7 @@ public:
 
 	DWORD textFormat = DT_LEFT | DT_VCENTER;
 
-	LPCWSTR boxFilepath = L"Image\\blanc.png";
+	LPCWSTR boxFilepath = L"Assets\\Image\\blanc.png";
 
 	D3DXVECTOR2 position = { 100,50 };
 	D3DXVECTOR2 size = { 300, 50 };

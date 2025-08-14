@@ -17,7 +17,7 @@ void LionelScene::GenerateContent()
 
 
 	GameObject* model = CreateEmpty();
-	model->AddComponent<MeshRenderer>(L"Mesh\\tiger.x");
+	model->AddComponent<MeshRenderer>(L"Assets\\Mesh\\tiger.x");
 	model->transform->RotateYaw(45);
 
 	AddToScene(model);

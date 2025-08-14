@@ -151,14 +151,14 @@ bool Button::isAbove()
 
 bool Button::UpdateMousePos()
 {
-	if (GetCursorPos(&mousePos))
+	if (Cursor::CursorPosition(&mousePos))
 	{
 		if (ScreenToClient(Engine::GetInstance()->window, &mousePos))
 		{
 			return true;
 		}
 	}
-
+	
 	return false;
 }
 

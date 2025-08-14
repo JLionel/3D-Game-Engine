@@ -31,8 +31,8 @@ void FPCam::Update()
     if (Input::GetKey(KeyCode::D) )
         _rightSpeed+= 1;
 
-    _rightSpeed += (mouseP.x - SCREEN_WIDTH / 2) / 100.0f * sensibility;
-    _upSpeed += (mouseP.y - SCREEN_HEIGHT / 2) / 100.0f * sensibility;
+    _rightSpeed += (mouseP.x - SCREEN_RESOLUTION_WIDTH / 2) / 100.0f * sensibility;
+    _upSpeed += (mouseP.y - SCREEN_RESOLUTION_HEIGHT / 2) / 100.0f * sensibility;
 
     if (_upSpeed < -_upSpeedLimit)
         _upSpeed = -_upSpeedLimit;

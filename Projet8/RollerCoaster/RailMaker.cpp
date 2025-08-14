@@ -11,7 +11,7 @@ void RailMaker::Update()
 	if (_cubes.size() < _maxDistance)
 	{
 		//next rail will have 3% (1.5% for a left turn, 1.5% for a right turn)
-		//to start a 45° turn of 10 rails  
+		//to start a 45Â° turn of 10 rails  
 		float random = rand() % 100;
 
 		if (random <= 1.5f && _currentStepRight == 0)
@@ -52,7 +52,7 @@ void RailMaker::CreateLevelStep()
 	D3DXVECTOR3 position = transform->GetPosition();
 
 	GameObject* box = new GameObject();
-	LPCWSTR path = L"Mesh\\rail.x";
+	LPCWSTR path = L"Assets\\Mesh\\rail.x";
 	box->AddComponent<MeshRenderer>(path);
 
 	D3DXVECTOR3  vector;
@@ -100,7 +100,7 @@ void RailMaker::CreateLevelStep()
 
 		targetGo->transform->SetPosition(targetPos);
 
-		targetGo->AddComponent<MeshRenderer>(L"Mesh\\target.x");
+		targetGo->AddComponent<MeshRenderer>(L"Assets\\Mesh\\target.x");
 		targetGo->AddComponent<Collider>();
 
 		const auto script = new Target(&_targets);

@@ -45,6 +45,20 @@ void App::Init(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, i
     // register the window class
     RegisterClassEx(&wc);
 
+    // ** getting the screen user size
+    POINT cursorPos{};
+    GetCursorPos(&cursorPos);
+    HMONITOR hMonitor = MonitorFromPoint(cursorPos, MONITOR_DEFAULTTONEAREST);
+
+    MONITORINFO mi{};
+    mi.cbSize = sizeof(mi);
+    GetMonitorInfo(hMonitor, &mi);
+
+    // Use the full monitor area for borderless fullscreen
+    const RECT& mr = mi.rcMonitor;
+    SCREEN_WIDTH = mr.right - mr.left;
+    SCREEN_HEIGHT = mr.bottom - mr.top;
+    
     // ** creating the window
 
     // create the window and use the result as the handle

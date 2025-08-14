@@ -13,11 +13,11 @@ void Camera::EngineUpdate()
     auto camDir = transform->GetUp(); // the up direction
 
     auto fov = D3DXToRadian(70); // the horizontal field of view
-    auto ratio = (FLOAT)SCREEN_WIDTH / (FLOAT)SCREEN_HEIGHT; // aspect ratio
+    auto ratio = (FLOAT)SCREEN_RESOLUTION_WIDTH / (FLOAT)SCREEN_RESOLUTION_HEIGHT; // aspect ratio
 
     // **************************** //
     d3ddev->Clear(0, NULL, D3DCLEAR_TARGET, _skyColor, 1.0f, 0); // background color
-
+ 
     d3ddev->SetFVF(CUSTOMFVF); // for the lightning
 
     D3DXMATRIX matView; // the view transform matrix

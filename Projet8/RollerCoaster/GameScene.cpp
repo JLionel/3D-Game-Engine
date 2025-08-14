@@ -35,7 +35,7 @@ void GameScene::GenerateContent()
 #pragma region cart
 	GameObject* cart = CreateEmpty();
 
-	LPCWSTR cartPath = L"Mesh\\minecart.x";
+	LPCWSTR cartPath = L"Assets\\Mesh\\minecart.x";
 	//cart->AddComponent<MeshRenderer>(cartPath);
 	cart->AddComponent<MeshRenderer>(cartPath);
 
@@ -59,8 +59,8 @@ void GameScene::GenerateContent()
 	auto crossGO = CreateEmpty();
 	auto img = crossGO->AddComponent<Image>();
 
-	img->filePath = L"Image\\flavien3.png";
-	img->position = D3DXVECTOR2(SCREEN_WIDTH * .5f, SCREEN_HEIGHT * .5f);
+	img->filePath = L"Assets\\Image\\flavien3.png";
+	img->position = D3DXVECTOR2(SCREEN_RESOLUTION_WIDTH * .5f, SCREEN_RESOLUTION_HEIGHT * .5f);
 	img->originalSize = true;
 	img->scale = D3DXVECTOR2(.5f, .5f);
 	img->imageColor = D3DCOLOR_ARGB(255, 255, 0, 0);
@@ -96,7 +96,7 @@ void GameScene::GenerateContent()
 	scoreText->text = L"Score: 0";
 	scoreText->size = D3DXVECTOR2(300, 50);
 	scoreText->fontHeight = hudTextSize;
-	scoreText->position = D3DXVECTOR2(SCREEN_WIDTH * .5f - scoreText->size.x * .5f, Ypadding);
+	scoreText->position = D3DXVECTOR2(SCREEN_RESOLUTION_WIDTH * .5f - scoreText->size.x * .5f, Ypadding);
 	
 	AddToScene(scoreGO);
 #pragma endregion Score
@@ -108,10 +108,10 @@ void GameScene::GenerateContent()
 
 	// panel
 	auto panel = pauseCanvas->AddComponent<Image>();
-	panel->filePath = L"Image\\blanc.png";
+	panel->filePath = L"Assets\\Image\\blanc.png";
 	panel->height = 520;
 	panel->width = 500;
-	auto panelPosition = D3DXVECTOR2((SCREEN_WIDTH - panel->width) * .5f, (SCREEN_HEIGHT - panel->height) * .5f);
+	auto panelPosition = D3DXVECTOR2((SCREEN_RESOLUTION_WIDTH - panel->width) * .5f, (SCREEN_RESOLUTION_HEIGHT - panel->height) * .5f);
 	panel->position = panelPosition;
 	panel->imageColor = D3DCOLOR_ARGB(120, 153, 153, 153);
 
@@ -165,8 +165,8 @@ void GameScene::GenerateContent()
 	timerText->text = L"000.00";
 	timerText->fontHeight = hudTextSize;
 	timerText->textColor = hudColor;
-	timerText->position.x = SCREEN_WIDTH * .5f - timerText->size.x * .5f;
-	timerText->position.y = SCREEN_HEIGHT - timerText->size.y - Ypadding;
+	timerText->position.x = SCREEN_RESOLUTION_WIDTH * .5f - timerText->size.x * .5f;
+	timerText->position.y = SCREEN_RESOLUTION_HEIGHT - timerText->size.y - Ypadding;
 
 	AddToScene(timerGO);
 #pragma endregion Timer
@@ -178,11 +178,11 @@ void GameScene::GenerateContent()
 
 	auto endgamePanel = endgameGO->AddComponent<Image>();
 	D3DXVECTOR2 endgamePanelPos;
-	endgamePanel->filePath = L"Image\\blanc.png";
+	endgamePanel->filePath = L"Assets\\Image\\blanc.png";
 	endgamePanel->imageColor = D3DCOLOR_ARGB(120, 153, 153, 153);
 	endgamePanel->width = 900;
 	endgamePanel->height = 450;
-	endgamePanelPos.x = SCREEN_WIDTH * .5f - endgamePanel->width * .5f;
+	endgamePanelPos.x = SCREEN_RESOLUTION_WIDTH * .5f - endgamePanel->width * .5f;
 	endgamePanelPos.y = 300;
 	endgamePanel->position = endgamePanelPos;
 

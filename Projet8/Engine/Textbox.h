@@ -21,7 +21,7 @@ public:
 	wstring text = L"Default text!";
 	DWORD textFormat = DT_CENTER | DT_VCENTER;
 
-	LPCWSTR boxFilepath = L"Image\\blanc.png";
+	LPCWSTR boxFilepath = L"Assets\\Image\\blanc.png";
 
 	D3DXVECTOR2 position = { 0,0 };
 	D3DXVECTOR2 size = { 200, 50 };

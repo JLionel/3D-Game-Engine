@@ -111,7 +111,7 @@ void CheckBox::EngineUpdate()
 
 bool CheckBox::UpdateMousePos()
 {
-	if (GetCursorPos(&_mousePos))
+	if (Cursor::CursorPosition(&_mousePos))
 	{
 		if (ScreenToClient(Engine::GetInstance()->window, &_mousePos))
 		{

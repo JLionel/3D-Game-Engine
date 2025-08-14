@@ -19,7 +19,7 @@ public:
 
 	DWORD textFormat = DT_CENTER | DT_VCENTER;
 
-	LPCWSTR boxFilepath = L"Image\\blanc.png";
+	LPCWSTR boxFilepath = L"Assets\\Image\\blanc.png";
 
 	FLOAT borderThickness = 5;
 

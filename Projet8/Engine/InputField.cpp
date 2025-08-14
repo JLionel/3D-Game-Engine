@@ -137,7 +137,7 @@ bool InputField::IsAbove()
 
 void InputField::Focus()
 {
-	if (GetCursorPos(&_mousePos))
+	if (Cursor::CursorPosition(&_mousePos))
 	{
 		if (ScreenToClient(Engine::GetInstance()->window, &_mousePos))
 		{

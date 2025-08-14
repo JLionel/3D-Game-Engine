@@ -5,6 +5,8 @@
 LPDIRECT3D9 d3d; // the pointer to our Direct3D interface
 LPDIRECT3DDEVICE9 d3ddev; // the pointer to the device class
 
+UINT16 SCREEN_WIDTH;
+UINT16 SCREEN_HEIGHT;
 
 // **************************** //
 
@@ -23,7 +25,7 @@ Engine::~Engine()
 
 // **************************** //
 
-void Engine::InitD3D()
+void Engine::InitD3D(HWND hWnd)
 {
     d3d = Direct3DCreate9(D3D_SDK_VERSION);
 
@@ -34,8 +36,8 @@ void Engine::InitD3D()
     d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
     d3dpp.hDeviceWindow = _window;
     d3dpp.BackBufferFormat = D3DFMT_X8R8G8B8;
-    d3dpp.BackBufferWidth = SCREEN_WIDTH;
-    d3dpp.BackBufferHeight = SCREEN_HEIGHT;
+    d3dpp.BackBufferWidth = SCREEN_RESOLUTION_WIDTH;
+    d3dpp.BackBufferHeight = SCREEN_RESOLUTION_HEIGHT;
     d3dpp.EnableAutoDepthStencil = TRUE;
     d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
     d3dpp.PresentationInterval = D3DPRESENT_INTERVAL_IMMEDIATE;
@@ -59,7 +61,7 @@ void Engine::InitD3D()
     d3ddev->SetRenderState(D3DRS_FOGCOLOR, D3DCOLOR_XRGB(0, 0, 0)); // Set the fog color
     d3ddev->SetRenderState(D3DRS_FOGVERTEXMODE, D3DFOG_LINEAR);
     d3ddev->SetRenderState(D3DRS_FOGSTART, *(DWORD*)(&Start));
-        d3ddev->SetRenderState(D3DRS_FOGEND, *(DWORD*)(&End));
+    d3ddev->SetRenderState(D3DRS_FOGEND, *(DWORD*)(&End));
 
     
 }
@@ -101,7 +103,7 @@ void Engine::Run(HWND window)
 
     // *** Part 1: Initialization *** //
 
-    InitD3D();
+    InitD3D(window);
     SceneManager::LoadScene(1);
     AudioManager::Initialize();
 

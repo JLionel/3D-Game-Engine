@@ -53,7 +53,7 @@ void MeshRenderer::EngineStart()
             lstrlenA(d3dxMaterials[i].pTextureFilename) > 0)
         {
 
-            string pathTexture = "Mesh\\";
+            string pathTexture = "Assets\\Mesh\\";
             pathTexture += d3dxMaterials[i].pTextureFilename;
 
             // Create the texture

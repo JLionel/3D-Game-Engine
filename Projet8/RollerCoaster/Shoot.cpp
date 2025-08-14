@@ -25,7 +25,7 @@ void Shoot::Update()
 		bullet->transform->SetPosition(transform->GetPosition());
 		bullet->transform->SetScale(bullet->transform->GetScale() * 0.5f);
 
-		LPCWSTR path = L"Mesh\\bullet.x";
+		LPCWSTR path = L"Assets\\Mesh\\bullet.x";
 		bullet->AddComponent<MeshRenderer>(path);
 		bullet->AddComponent<Collider>();
 

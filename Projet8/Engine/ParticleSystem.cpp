@@ -38,9 +38,9 @@ ParticleSystem::~ParticleSystem()
 
 void ParticleSystem::Init(string texFileName)
 {
-	//D3DXCreateTextureFromFile(d3ddev, L"Particle\\corona.png", &_tex);
+	//D3DXCreateTextureFromFile(d3ddev, L"Assets\\Particle\\corona.png", &_tex);
 
-	string pathTexture = "Particle\\" + texFileName;
+	string pathTexture = "Assets\\Particle\\" + texFileName;
 	// Create the texture
 	if (FAILED(D3DXCreateTextureFromFileA(d3ddev,
 		pathTexture.c_str(),

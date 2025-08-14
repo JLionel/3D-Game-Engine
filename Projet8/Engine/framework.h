@@ -82,8 +82,11 @@ using namespace std;
 }
 
 // application
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
+#define SCREEN_RESOLUTION_WIDTH 1920
+#define SCREEN_RESOLUTION_HEIGHT 1080
+
+extern UINT16 SCREEN_WIDTH;
+extern UINT16 SCREEN_HEIGHT;
 
 // GLOBAL VARIABLES
 

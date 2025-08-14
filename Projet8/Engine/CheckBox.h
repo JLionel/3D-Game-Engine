@@ -55,8 +55,8 @@ private:
 	void ColorNormal();
 	void ColorDisabled();
 
-	LPCWSTR _boxFilepath = L"Image\\blanc.png";
-	LPCWSTR _checkedBoxFilepath = L"Image\\checked.png";
+	LPCWSTR _boxFilepath = L"Assets\\Image\\blanc.png";
+	LPCWSTR _checkedBoxFilepath = L"Assets\\Image\\checked.png";
 
 	bool _checked = false;
 	bool _drawBox = true;

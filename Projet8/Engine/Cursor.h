@@ -19,6 +19,7 @@ public:
 
 	static void CursorUpdate();
 
+	static BOOL CursorPosition(_Out_ LPPOINT cursorPos);
 private:
 	static LockMode _cursorLockMode;
 

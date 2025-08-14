@@ -28,7 +28,7 @@ private:
 	HWND _window;
 	Profiler* _profiler;
 	
-	void InitD3D();
+	void InitD3D(HWND hwnd);
 	void UninitD3D();
 
 	void CheckForNewFrame();
